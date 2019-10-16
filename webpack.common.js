@@ -3,13 +3,23 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    main: './src/index.js'
   },
   output: {
     path: path.resolve(__dirname, './dist')
   },
   module: {
     rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
+      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
@@ -22,7 +32,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Test'
+      template: 'public/index.html'
     })
   ]
 };

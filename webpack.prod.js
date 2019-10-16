@@ -8,7 +8,6 @@ module.exports = merge(common, {
     filename: '[name].[contenthash].js'
   },
   optimization: {
-    runtimeChunk: 'single',
     splitChunks: {
       cacheGroups: {
         vendor: {
