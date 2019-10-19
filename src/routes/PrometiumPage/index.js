@@ -1,1 +1,1 @@
-export { default } from './PrometiumPage';
+export { default } from './PrometiumPageContainer';
