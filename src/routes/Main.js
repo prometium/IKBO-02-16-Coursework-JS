@@ -1,5 +1,5 @@
 import React from 'react';
-import AppBar from '../components/AppBar';
+import AppBar from 'src/components/AppBar';
 
 function Main() {
   return (
