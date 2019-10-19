@@ -1,7 +1,13 @@
 import React from 'react';
+import AppBar from '../components/AppBar';
 
 function Main() {
-  return <div>...</div>;
+  return (
+    <>
+      <AppBar title="Главная" />
+      <div>...</div>
+    </>
+  );
 }
 
 export default Main;

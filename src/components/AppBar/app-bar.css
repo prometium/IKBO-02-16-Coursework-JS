@@ -1,15 +1,15 @@
-.nav-bar {
+.app-bar {
   display: flex;
   min-height: 64px;
   padding: 0 16px;
 }
 
-.nav-bar__block {
+.app-bar__block {
   display: flex;
   align-items: center;
 }
 
-.nav-bar__title-block {
+.app-bar__title-block {
   margin-left: 32px;
 }
 
@@ -49,36 +49,35 @@
   }
 }
 
-.nav-bar__brand-link {
+.app-bar__brand-link {
   display: flex;
   align-items: center;
   height: 100%;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-decoration: none;
   animation: 6s linear 0s infinite alternate color-loop;
 }
 
-.nav-bar__page-title {
+.app-bar__page-title {
   color: #fff;
-  font-size: 1.2rem;
-  text-transform: uppercase;
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 600px) {
-  .nav-bar {
+  .app-bar {
     min-height: 48px;
   }
 
-  .nav-bar__brand-link {
-    font-size: 1.5rem;
+  .app-bar__brand-link {
+    font-size: 1.4rem;
   }
 
-  .nav-bar__title-block {
+  .app-bar__title-block {
     margin-left: 16px;
   }
 
-  .nav-bar__page-title {
-    font-size: 1rem;
+  .app-bar__page-title {
+    font-size: 1.2rem;
   }
 }
