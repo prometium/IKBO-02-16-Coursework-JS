@@ -1,5 +1,11 @@
-.Alword-container {
+html, body {
+  overflow: hidden;
+}
+
+/* .Alword-container {
   margin: auto;
-  height: 400px;
-  max-width: 1500px;
+} */
+#canvas
+{
+  background: black;
 }
