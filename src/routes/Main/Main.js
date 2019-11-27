@@ -13,6 +13,11 @@ function Main() {
               <Link to="/prometium">Красновский</Link>
             </li>
           </ul>
+          <ul>
+            <li>
+              <Link to="/alword">Слепушко</Link>
+            </li>
+          </ul>
         </nav>
       </section>
     </>
