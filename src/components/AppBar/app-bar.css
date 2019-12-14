@@ -53,14 +53,12 @@
   display: flex;
   align-items: center;
   height: 100%;
-  color: #fff;
   font-size: 1.8rem;
   text-decoration: none;
   animation: 6s linear 0s infinite alternate color-loop;
 }
 
 .app-bar__page-title {
-  color: #fff;
   font-size: 1.4rem;
 }
 

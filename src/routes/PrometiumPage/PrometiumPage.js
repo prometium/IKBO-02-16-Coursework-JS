@@ -13,10 +13,12 @@ import AppBar from 'src/components/AppBar';
 
 import './prometium-page.css';
 
+const color = '#6200ea';
+
 function PrometiumPage({ data }) {
   return (
     <>
-      <AppBar title="Красновский" color="#512da8" />
+      <AppBar title="Красновский" color={color} />
       <section>
         <div className="prometium-container">
           <ResponsiveContainer>
@@ -37,7 +39,7 @@ function PrometiumPage({ data }) {
                 name="Курс валюты к рублю"
                 dataKey="value"
                 barSize={20}
-                fill="#8884d8"
+                fill={color}
               />
             </BarChart>
           </ResponsiveContainer>
