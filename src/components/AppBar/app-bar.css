@@ -2,6 +2,7 @@
   display: flex;
   min-height: 64px;
   padding: 0 16px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .app-bar__block {
@@ -53,13 +54,13 @@
   display: flex;
   align-items: center;
   height: 100%;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-decoration: none;
   animation: 6s linear 0s infinite alternate color-loop;
 }
 
 .app-bar__page-title {
-  font-size: 1.4rem;
+  font-size: 1.25rem;
 }
 
 @media screen and (max-width: 960px) {
@@ -67,15 +68,7 @@
     min-height: 48px;
   }
 
-  .app-bar__brand-link {
-    font-size: 1.4rem;
-  }
-
   .app-bar__title-block {
-    margin-left: 16px;
-  }
-
-  .app-bar__page-title {
-    font-size: 1.2rem;
+    margin-left: 24px;
   }
 }
