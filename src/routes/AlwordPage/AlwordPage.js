@@ -1,4 +1,3 @@
-//@ts-check
 import React from 'react';
 import AppBar from 'src/components/AppBar';
 import { useRef } from 'react'
@@ -14,13 +13,12 @@ function AlwordPage() {
   const ref = useRef(null);
   const [data, setData] = React.useState({ background: '#fff', foreground: "#ff0000" });
   
-  let FPS = 1; 
-  let SPEED = 100;
+  let FPS = 60; 
+  let SPEED = 50;
   let height = document.documentElement.clientHeight - 64;
   let width = document.documentElement.clientWidth;
   let foreground = data.foreground;
   let background = data.background;
-  let updateBackground = false;
   const handleBackGround = (color) => {
     background = color.hex;
     setData({ background: background, foreground: foreground });
@@ -50,8 +48,6 @@ function AlwordPage() {
     }
 
     let canvas, context;
-    //var height = window.screen.height-164;
-    console.table(document.documentElement);
     let dots = [{
       x: 0,
       y: height
@@ -88,13 +84,6 @@ function AlwordPage() {
     }
     
     function draw() {
-
-      if(updateBackground)
-      {
-        context.fillStyle = background;
-        context.fillRect(0, 0, width, height);
-        updateBackground = false;
-      }
 
       let dot = dots[getRandomInt(0, dots.length - 1)];
 
