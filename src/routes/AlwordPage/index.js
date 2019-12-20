@@ -1,1 +1,1 @@
-export { default } from './AlwordPageContainer';
+export { default } from './AlwordPage';
