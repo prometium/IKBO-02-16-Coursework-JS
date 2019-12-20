@@ -1,7 +1,7 @@
 import React from 'react';
 import AppBar from 'src/components/AppBar';
-import {useRef} from 'react'
-import {useEffect} from 'react'
+import { useRef } from 'react'
+import { useEffect } from 'react'
 
 
 import './Alword-page.css';
@@ -9,7 +9,7 @@ import './Alword-page.css';
 function AlwordPage() {
   const ref = useRef(null);
   useEffect(() => {
-    if(ref.current){
+    if (ref.current) {
       Process(ref);
     }
   });
@@ -24,12 +24,10 @@ function AlwordPage() {
 export default AlwordPage;
 
 
+var SPEED = 100;
 function Process(ref) {
-  /**
-   * Provides requestAnimationFrame in a cross browser way.
-   * @author paulirish  http://paulirish.com/
-   */
-  var FPS = 120;
+  
+  var FPS = 60;
 
   if (!window.requestAnimationFrame) {
 
@@ -48,31 +46,30 @@ function Process(ref) {
     })();
   }
 
-
-  // example code from mr doob : http://mrdoob.com/lab/javascript/requestanimationframe/
-
   var canvas, context;
-  var height = 1024,
-    width = 1024;
+  //var height = window.screen.height-164;
+  console.table(document.documentElement);
+  var height = document.documentElement.clientHeight-64;
+  var width = document.documentElement.clientWidth;
   var dots = [{
     x: 0,
     y: height
   }, {
-    x: width / 2,
+    x: width/2,
     y: 0
   }, {
     x: width,
     y: height
   }];
-  var currentDot = { x: getRandomInt(0, width), y: getRandomInt(0, height) }
+  var currentDot = {x:dots[0].x,y:dots[0].y}
   init();
   animate();
 
   function init() {
 
     canvas = document.createElement('canvas');
-    canvas.width = height;
-    canvas.height = width;
+    canvas.width = width;
+    canvas.height = height;
     context = canvas.getContext('2d');
     context.fillStyle = 'rgb(0,0,0)';
     context.fillRect(0, 0, width, height);
@@ -82,15 +79,18 @@ function Process(ref) {
   function animate() {
 
     requestAnimationFrame(animate);
-    draw();
+
+    for(let i = 0; i<SPEED; i++){
+      draw();
+    }
 
   }
 
   function draw() {
 
     var time = new Date().getTime() * 0.001;
-    //console.table(dots);
-    let dot = dots[getRandomInt(0, 2)];
+    console.log(dots.length);
+    let dot = dots[getRandomInt(0, dots.length-1)];
 
     var x = currentDot.x + (dot.x - currentDot.x) / 2;
     var y = currentDot.y + (dot.y - currentDot.y) / 2;
