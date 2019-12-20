@@ -15,7 +15,7 @@ function AlwordPage() {
   });
   return (
     <>
-      <AppBar title="Слепушко" color="black" />
+      <AppBar title="Слепушко" color="#000" />
       <div ref={ref} />
     </>
   );
