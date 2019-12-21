@@ -4,31 +4,31 @@ import { Link } from 'react-router-dom';
 
 import './NavigateButton.css';
 
-function NavigateButton({ title, color = '#424242', className = '', ...rest }) {
+function NavigateButton({ title, primaryColor = '#424242', to = '/', text = "empty",fontSize="40px", ...rest }) {
   return (
-    <header
-      className={['app-bar', className].join(' ')}
-      style={{ backgroundColor: color, color: getContrast(color) }}
-      {...rest}
-    >
-      <div className="app-bar__block">
-        <Link to="/" className="app-bar__brand-link">
-          IKBO-02-16-Coursework-JS
-        </Link>
-      </div>
-      {title && (
-        <div className="app-bar__block app-bar__title-block">
-          <h1 className="app-bar__page-title">{title}</h1>
+
+    <Link to={to} style={{ textDecoration: 'none',margin:"10px" }}>
+    <div className="cardContainer">
+      <div className="cardHeader">
+        <div className="cardIdentity">
+          <div className="icon" style={{ backgroundColor: primaryColor }} ></div>
+          <h4>{title}</h4>
         </div>
-      )}
-    </header>
+      </div>
+      <div className="cardBody">
+        <h1 style={{fontSize}}>{text}</h1>
+      </div>
+    </div>
+    </Link>
   );
 }
 
-AppBar.propTypes = {
+NavigateButton.propTypes = {
   title: PropTypes.string,
-  color: PropTypes.string,
-  className: PropTypes.string
+  primaryColor: PropTypes.string,
+  secondaryColor: PropTypes.string,
+  to: PropTypes.string,
+  fontSize: PropTypes.string
 };
 
 export default NavigateButton;
