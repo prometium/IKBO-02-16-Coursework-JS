@@ -1,16 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import AppBar from 'src/components/AppBar';
 
 function Main() {
   return (
     <>
-      <AppBar title="Главная" />
+      <AppBar title="Главная"/>
       <section>
         <nav>
           <ul>
             <li>
               <Link to="/prometium">Красновский</Link>
+            </li>
+            <li>
+              <Link to="/rugged">Шумилов</Link>
             </li>
             <li>
               <Link to="/Lulusuzaku">Очеретная</Link>
