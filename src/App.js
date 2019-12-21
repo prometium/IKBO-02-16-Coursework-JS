@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Main = React.lazy(() => import('./routes/Main'));
 const PrometiumPage = React.lazy(() => import('./routes/PrometiumPage'));
+const VinnikovPage = React.lazy(() => import('./routes/VinnikovPage'));
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Main} />
           <Route exact path="/prometium" component={PrometiumPage} />
+          <Route exact path="/vinnikov" component={VinnikovPage} />
         </Switch>
       </React.Suspense>
     </Router>
