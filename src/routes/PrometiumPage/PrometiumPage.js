@@ -10,12 +10,13 @@ import {
   Legend
 } from 'recharts';
 import AppBar from 'src/components/AppBar';
+import Button from 'src/components/Button';
 
 import './prometium-page.css';
 
 const color = '#6200ea';
 
-function PrometiumPage({ data }) {
+function PrometiumPage({ data, handleClick }) {
   return (
     <>
       <AppBar title="Красновский" color={color} />
@@ -44,6 +45,11 @@ function PrometiumPage({ data }) {
             </BarChart>
           </ResponsiveContainer>
         </div>
+        <div className="prometium-buttons-container">
+          <Button onClick={handleClick} primary className="prometium-button">
+            Обновить
+          </Button>
+        </div>
       </section>
     </>
   );
@@ -55,7 +61,8 @@ PrometiumPage.propTypes = {
       name: PropTypes.string.isRequired,
       value: PropTypes.number.isRequired
     }).isRequired
-  ).isRequired
+  ).isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default PrometiumPage;
