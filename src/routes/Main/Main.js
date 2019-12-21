@@ -30,6 +30,9 @@ function Main() {
             <li>
               <Link to="/StasPotapov">Потапов</Link>
             </li>
+            <li>
+              <Link to="/Justalgit">Ларин</Link>
+            </li>
           </ul>
         </nav>
       </section>

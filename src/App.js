@@ -12,6 +12,7 @@ const GlebSuvakinPage = React.lazy(() => import('./routes/GlebSuvakinPage'));
 const VezlimPage = React.lazy(() => import('./routes/VezlimPage'));
 const LegendCreoModPage = React.lazy(() => import('./routes/LegendCreoModPage'));
 const StasPotapovPage = React.lazy(() => import('./routes/StasPotapovPage'));
+const JustalgitPage = React.lazy(() => import('./routes/JustalgitPage'));
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
           <Route exact path="/Vezlim" component={VezlimPage} />
           <Route exact path="/LegendCreoMod" component={LegendCreoModPage} />
           <Route exact path="/StasPotapov" component={StasPotapovPage} />
+          <Route exact path="/Justalgit" component={JustalgitPage} />
+
         </Switch>
       </React.Suspense>
     </Router>
