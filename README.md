@@ -57,3 +57,6 @@ Webpack настроен на использование двух конфигу
 
 ### Красновский - Recharts
 Композиционная библиотека диаграмм, построенная на компонентах React (http://recharts.org).
+
+### Шумилов - React Yandex Maps
+Yandex Maps API bindings for React (https://github.com/gribnoysup/react-yandex-maps)

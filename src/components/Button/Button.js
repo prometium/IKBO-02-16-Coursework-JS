@@ -6,7 +6,7 @@ import './button.css';
 function Button({
                   component = 'button',
                   primary = false,
-                  className,
+                  className = '',
                   ...rest
                 }) {
   const Component = component;
