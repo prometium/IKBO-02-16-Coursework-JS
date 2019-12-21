@@ -18,6 +18,9 @@ function Main() {
             <li>
               <Link to="/Narcologer">Вельтищев</Link>
             </li>
+            <li>
+              <Link to="/GlebSuvakin">Сувакин</Link>
+            </li>
           </ul>
         </nav>
       </section>
