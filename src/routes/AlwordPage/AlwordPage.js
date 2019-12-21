@@ -11,7 +11,7 @@ import './Alword-page.css';
 
 function AlwordPage() {
   const ref = useRef(null);
-  const [data, setData] = React.useState({ background: '#fff', foreground: "#ff0000" });
+  const [data, setData] = React.useState({ background: '#fff', foreground: "#fff" });
   
   let FPS = 60; 
   let SPEED = 50;
