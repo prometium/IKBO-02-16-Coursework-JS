@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import AppBar from 'src/components/AppBar';
+import Footer from "react-footer-comp";
 
 import './virachevPage.css';
 
@@ -60,9 +61,9 @@ function VirachevPage({ data }) {
     });
 
     return (
-        <>
+        <div id="wrapperVirachev">
             <AppBar title="Вирачев" />
-            <div className = "wrapper">
+            <div className = "dropnbox">
                 <ul id="list">
                     <li>
                         0
@@ -79,9 +80,26 @@ function VirachevPage({ data }) {
                     <li>
                         4
                     </li>
+                    <li>
+                        5
+                    </li>
+                    <li>
+                        6
+                    </li>
                 </ul>
             </div>
-        </>
+            <Footer
+                copyrightIcon
+                years={[2019]}
+                height={150}
+                bgColor={"#424242"}
+                copyrightText
+                copyrightIconStyle={{ color: "white", fontSize: 20, marginRight: 10 }}
+                copyrightTextStyle={{ color: "white", fontSize: 20, marginRight: 10 }}
+                textStyle={{ color: "white", fontSize: 16, marginRight: 10 }}
+                text={"All rights reserved."}
+            />
+        </div>
     );
  }
 
