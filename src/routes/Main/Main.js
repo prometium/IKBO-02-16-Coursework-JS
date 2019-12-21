@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import AppBar from 'src/components/AppBar';
 import NavigateButton from '../../components/NavigateButton';
 
@@ -13,7 +12,7 @@ function Main() {
             <NavigateButton to="/prometium" title="Красновский" text="Recharts" primaryColor="#512da8" />
             <NavigateButton to="/rugged" title="Шумилов" text="React Yandex Maps" fontSize="30px" primaryColor="#1976D2" />
             <NavigateButton to="/alword" title="Слепушко" text="React Color" primaryColor="#2196F3" />
-            <NavigateButton to="/wo1kowsky" title"Волков" text="React Memes" primaryColor="#ff69b4" />
+            <NavigateButton to="/wo1kowsky" title="Волков" text="React Memes" primaryColor="#ff69b4" />
             <NavigateButton to="/Lulusuzaku" title="Очеретная" text="⭐" primaryColor="#E91E63" />
             <NavigateButton to="/Justalgit" title="Ларин" text="🕵️‍♂️" primaryColor="#9C27B0" />
             <NavigateButton to="/Narcologer" title="Вельтищев" text="💂‍♂️" primaryColor="#F44336" />
