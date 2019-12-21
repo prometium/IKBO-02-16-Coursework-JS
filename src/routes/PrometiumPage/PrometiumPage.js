@@ -38,11 +38,7 @@ function PrometiumPage({ data, handleClick }) {
                 name="Курс валюты к рублю"
                 dataKey="value"
                 barSize={20}
-                fill={
-                  getComputedStyle(document.documentElement).getPropertyValue(
-                    '--color-secondary'
-                  ) || '#616161'
-                }
+                fill="#546e7a"
               />
             </BarChart>
           </ResponsiveContainer>
