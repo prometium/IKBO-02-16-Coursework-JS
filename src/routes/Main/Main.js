@@ -21,6 +21,12 @@ function Main() {
             <li>
               <Link to="/GlebSuvakin">Сувакин</Link>
             </li>
+            <li>
+              <Link to="/Vezlim">Цепковский</Link>
+            </li>
+            <li>
+              <Link to="/LegendCreoMod">Иваненко</Link>
+            </li>
           </ul>
         </nav>
       </section>
