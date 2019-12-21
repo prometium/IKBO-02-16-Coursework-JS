@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'react-image-resizer';
 import fetchJsonp from "fetch-jsonp";
+import "./meme-component.css";
 
 
 function max_meme(memes) {
@@ -47,12 +48,14 @@ function MemeComponent() {
 
     return (
         <>
+            <div className='meme_div'>
             <Image
                 src={url}
-                alt="9GAG HOTTEST MEME"
-                height={900}
+                alt="HOT MEME"
+                height={600}
                 width={600}
             />
+            </div>
         </>
     );
 }
