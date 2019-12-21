@@ -1,5 +1,6 @@
 import './reset.css';
 import './base.css';
+import './theme.css';
 
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';

@@ -6,13 +6,12 @@ const api = () =>
     .then(response => response.json())
     .catch(error => {
       console.error(error);
-      /*die*/
     });
 
 function PrometiumPageContainer() {
   const [data, setData] = React.useState([]);
 
-  React.useEffect(() => {
+  const handleClick = () => {
     api().then(data => {
       setData(
         Object.values(data.Valute).map(({ CharCode, Value }) => ({
@@ -21,9 +20,13 @@ function PrometiumPageContainer() {
         }))
       );
     });
+  };
+
+  React.useEffect(() => {
+    handleClick();
   }, []);
 
-  return <PrometiumPage data={data} />;
+  return <PrometiumPage data={data} handleClick={handleClick} />;
 }
 
 export default PrometiumPageContainer;
