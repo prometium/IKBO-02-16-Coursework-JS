@@ -12,6 +12,27 @@ function Main() {
             <li>
               <Link to="/prometium">Красновский</Link>
             </li>
+            <li>
+              <Link to="/Lulusuzaku">Очеретная</Link>
+            </li>
+            <li>
+              <Link to="/Narcologer">Вельтищев</Link>
+            </li>
+            <li>
+              <Link to="/GlebSuvakin">Сувакин</Link>
+            </li>
+            <li>
+              <Link to="/Vezlim">Цепковский</Link>
+            </li>
+            <li>
+              <Link to="/LegendCreoMod">Иваненко</Link>
+            </li>
+            <li>
+              <Link to="/StasPotapov">Потапов</Link>
+            </li>
+            <li>
+              <Link to="/Justalgit">Ларин</Link>
+            </li>
           </ul>
           <ul>
             <li>
