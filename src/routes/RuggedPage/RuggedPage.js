@@ -10,29 +10,37 @@ function RuggedPage() {
   const mapState = {center: [55.669705, 37.481081], zoom: 15, controls: []};
 
   const [shown, setShown] = React.useState(true);
-  const trafficState = React.useMemo(() => ({trafficShown: shown, visible: shown}), [shown]);
+  const trafficState = React.useMemo(() => ({trafficShown: shown}), [shown]);
 
   return (
     <>
-      <AppBar title="Шумилов" color="#512da8"/>
-      isTrafficShown
-      <YMaps>
-        <Map defaultState={mapState} className='rugged-map'>
-          <TrafficControl state={trafficState}/>
-          <ZoomControl/>
-          <FullscreenControl/>
-          <Placemark
-            modules={['geoObject.addon.balloon']}
-            defaultGeometry={mapState.center}
-            properties={{balloonContentBody: 'РТУ-МИРЭА'}}
-          />
-        </Map>
+      <AppBar title="Шумилов" color="primary"/>
 
-      </YMaps>
+      <div className="rugged-container">
+        <YMaps>
+          <Map defaultState={mapState} className='rugged-map'>
+            <TrafficControl
+              state={trafficState}
+              onChange={event => {
+                setShown(event.originalEvent.target.state._data.trafficShown)
+              }}
+            />
+            <ZoomControl/>
+            <FullscreenControl/>
+            <Placemark
+              modules={['geoObject.addon.balloon']}
+              defaultGeometry={mapState.center}
+              properties={{balloonContentBody: 'РТУ-МИРЭА'}}
+            />
+          </Map>
+        </YMaps>
+      </div>
+      <div className="rugged-buttons-container">
+        <Button className="rugged-button" primary onClick={() => {
+          setShown(!trafficState.trafficShown)
+        }}>Переключить отображение пробок</Button>
+      </div>
 
-      <Button className="button-test" primary onClick={() => {
-        setShown(!trafficState.trafficShown)
-      }}>Переключить отображение пробок</Button>
     </>
   );
 }
