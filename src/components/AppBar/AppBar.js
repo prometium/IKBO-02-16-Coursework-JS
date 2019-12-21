@@ -5,11 +5,20 @@ import getContrast from 'src/utils/getContrast';
 
 import './app-bar.css';
 
+const colorPrimary = getComputedStyle(
+  document.documentElement
+).getPropertyValue('--color-primary');
+
 function AppBar({ title, color = '#424242', className = '', ...rest }) {
+  const finalColor = color === 'primary' ? colorPrimary : color;
+
   return (
     <header
       className={['app-bar', className].join(' ')}
-      style={{ backgroundColor: color, color: getContrast(color) }}
+      style={{
+        backgroundColor: finalColor,
+        color: getContrast(finalColor)
+      }}
       {...rest}
     >
       <div className="app-bar__block">

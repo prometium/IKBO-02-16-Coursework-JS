@@ -1,5 +1,10 @@
+const isHexColor = hexcolor =>
+  /^#[0-9A-F]{6}$/i.test(hexcolor) || /^#([0-9A-F]{3}){1,2}$/i.test(hexcolor);
+
 export default function getContrast(hexcolor) {
-  if (hexcolor[0] !== '#' || (hexcolor.length !== 4 && hexcolor.length !== 7)) {
+  hexcolor = hexcolor.trim();
+
+  if (!isHexColor(hexcolor)) {
     throw new Error('Invalid HEX color.');
   }
 
