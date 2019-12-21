@@ -15,6 +15,9 @@ function Main() {
             <li>
               <Link to="/Lulusuzaku">Очеретная</Link>
             </li>
+            <li>
+              <Link to="/Narcologer">Вельтищев</Link>
+            </li>
           </ul>
         </nav>
       </section>
