@@ -38,6 +38,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
+    "react-yandex-maps": "^4.2.0",
     "recharts": "^1.8.5"
   }
 }
