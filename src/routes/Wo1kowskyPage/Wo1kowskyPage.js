@@ -1,14 +1,10 @@
-import AppBar from "../../components/AppBar";
+import AppBar from "src/components/AppBar";
 import React from 'react';
-import MemeComponent from "../../components/MemeComponent";
-import Button from "../../components/Button";
+import MemeComponent from "src/components/MemeComponent";
+import Button from "src/components/Button";
 
 function Wo1kowskyPage() {
     const [isShown, setShown] = React.useState(false);
-
-    React.useEffect(() => {
-
-    }, []);
 
     return (
         <>
