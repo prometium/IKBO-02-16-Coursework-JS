@@ -1,13 +1,4 @@
-/*.prometium-container {
-    margin: auto;
-    min-height: 200px;
-    height: calc(100vh - 64px - 32px);
-    max-width: 1500px;
-  }
-  
-  @media screen and (max-width: 960px) {
-    .prometium-container {
-      height: calc(100vh - 48px - 32px);
-    }
-  }
-  */
+.active-pink-2 input[type="text"]:focus:not([readonly]) {
+  border-bottom: 1px solid #f48fb1;
+  box-shadow: 0 1px 0 0 #f48fb1;
+}

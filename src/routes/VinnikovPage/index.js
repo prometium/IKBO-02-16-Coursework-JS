@@ -1,1 +1,1 @@
-export { default } from './VinnikovPageContainer';
+export { default } from './VinnikovPage';
