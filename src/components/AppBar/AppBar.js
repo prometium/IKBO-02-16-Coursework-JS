@@ -5,12 +5,27 @@ import getContrast from 'src/utils/getContrast';
 
 import './app-bar.css';
 
-const colorPrimary = getComputedStyle(
-  document.documentElement
-).getPropertyValue('--color-primary');
+const getThemeColor = variant =>
+  getComputedStyle(document.documentElement).getPropertyValue(
+    `--color-${variant}`
+  );
 
-function AppBar({ title, color = '#424242', className = '', ...rest }) {
-  const finalColor = color === 'primary' ? colorPrimary : color;
+const colorPrimary = getThemeColor('primary');
+const colorSecondary = getThemeColor('secondary');
+
+const detectFinalColor = color => {
+  switch (color) {
+    case 'primary':
+      return colorPrimary;
+    case 'secondary':
+      return colorSecondary;
+    default:
+      return color;
+  }
+};
+
+function AppBar({ title, color = '#616161', className = '', ...rest }) {
+  const finalColor = detectFinalColor(color);
 
   return (
     <header
@@ -41,4 +56,4 @@ AppBar.propTypes = {
   className: PropTypes.string
 };
 
-export default AppBar;
+export default React.memo(AppBar);
