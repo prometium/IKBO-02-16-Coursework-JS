@@ -53,6 +53,24 @@ Webpack настроен на использование двух конфигу
 ### Шумилов - React-компонент Button
  Использование параметра `primary` оформляет кнопку как основную, без параметра кнопка оформляется как второстепенная (по умолчанию).
 
+### Слепушко React-компонент NavigationButton
+ Навигационная личная карточка на главной странице
+ 
+Параметр | Значение по умолчанию | Описание
+------------ | ------------- | -------------
+title | обязательный параметр | Заголовок на карточке - ваша Фамилия
+primaryColor | '#424242'| Цвет кружочка в заголовке
+to | '/' | Ссылка на вашу страницу
+text | 'empty' | Название модуля который вы используете
+fontSize | "40px" | Размер `text` если вдруг название модуля слишком большое
+
+#### Пример
+```javascript
+import NavigateButton from '../../components/NavigateButton';
+...
+<NavigateButton to="/rugged" title="Шумилов" text="React Yandex Maps" fontSize="30px" primaryColor="#1976D2" />
+```
+
 ## Использованные сторонние модули
 
 ### Красновский - Recharts
@@ -60,3 +78,7 @@ Webpack настроен на использование двух конфигу
 
 ### Шумилов - React Yandex Maps
 Yandex Maps API bindings for React (https://github.com/gribnoysup/react-yandex-maps)
+
+### Слепушко - React Color
+A Collection of Color Pickers from Sketch, Photoshop, Chrome, Github, Twitter, Material Design & more
+(https://casesandberg.github.io/react-color/)
