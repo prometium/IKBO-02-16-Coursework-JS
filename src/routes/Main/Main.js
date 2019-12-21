@@ -27,6 +27,9 @@ function Main() {
             <li>
               <Link to="/LegendCreoMod">Иваненко</Link>
             </li>
+            <li>
+              <Link to="/StasPotapov">Потапов</Link>
+            </li>
           </ul>
         </nav>
       </section>
