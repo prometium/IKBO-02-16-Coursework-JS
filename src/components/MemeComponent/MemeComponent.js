@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'react-image-resizer';
 import fetchJsonp from "fetch-jsonp";
+import PropTypes from 'prop-types';
 import "./meme-component.css";
 
 function max_meme(memes) {
@@ -36,11 +37,9 @@ const api = () =>
         });
 
 
-function MemeComponent() {
+function MemeComponent({open, closeMeme}) {
     const [url, setUrl] = React.useState('https://img1.looper.com/img/gallery/things-only-adults-notice-in-shrek/intro-1573597941.jpg');
-    const [isShown, setShown] = React.useState(true);
-
-
+    //const [isShown, setShown] = React.useState(true);
 
     React.useEffect(() => {
         api().then(meme_url => {
@@ -50,9 +49,11 @@ function MemeComponent() {
 
     return (
         <div className="meme_div"
-             onClick={() => setShown(!isShown)}
-             style={{display: isShown ? 'flex' : 'none'}}>
-            <div onClick={event => {
+             onClick={closeMeme}
+             style={{display: open ? 'flex' : 'none'}}>
+            <div
+                className="inner_div"
+                onClick={event => {
                 event.stopPropagation();
             }}>
                 <Image
@@ -65,5 +66,10 @@ function MemeComponent() {
         </div>
     );
 }
+
+MemeComponent.propTypes = {
+    open: PropTypes.bool,
+    closeMeme: PropTypes.func,
+};
 
 export default MemeComponent;

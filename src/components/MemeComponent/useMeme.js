@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function useMemeComponent() {
-    const [open, setOpen] = React.useState(false);
+export default function useMemeComponent(initState=true) {
+    const [open, setOpen] = React.useState(initState);
 
     const openMeme = () => {
         setOpen(true);
