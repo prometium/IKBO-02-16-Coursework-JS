@@ -55,7 +55,7 @@ function VirachevPage({ data }) {
     const ref = useRef();
 
     useEffect(() => {
-        sortable( document.getElementById('list'), function (item){
+        sortable( ref.current, function (item){
             console.log(item);
         });
     });
@@ -63,29 +63,15 @@ function VirachevPage({ data }) {
     return (
         <div id="wrapperVirachev">
             <AppBar title="Вирачев" />
-            <div className = "dropnbox">
-                <ul id="list">
-                    <li>
-                        0
-                    </li>
-                    <li>
-                        1
-                    </li>
-                    <li>
-                        2
-                    </li>
-                    <li>
-                        3
-                    </li>
-                    <li>
-                        4
-                    </li>
-                    <li>
-                        5
-                    </li>
-                    <li>
-                        6
-                    </li>
+            <div id = "dropnbox">
+                <ul ref={ref} >
+                    <li>0</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
                 </ul>
             </div>
             <Footer
