@@ -7,28 +7,28 @@ function ShamrayPage({ data }) {
 
     useEffect(() => {
         // тут можно писать код
-        alert("Hello from ShamrayPage")
-    
+        //alert("Hello from ShamrayPage")
+
     });
 
     return (
-        // разметку внутри <>тут</>
         <>
             <AppBar title="Шамрай" />
-            <div>Hello!</div>
-			<p><shamray>Введите сумму в рублях</shamray></p>
-			<input maxlength="25" size="40" type=number id="rubInput" oninput="changeCurrency()">
-			<p><shamray>Сумма в долларах</shamray></p>
-			<input maxlength="25" size="40" type=number id="dollarOutput" readonly="readonly">
+            <div>
+                <p className="shamray">Введите сумму в рублях</p>
+                <input maxLength="25" size="40" type={"number"} id="rubInput" onInput={changeCurrency} />
+                <p className="shamray">Сумма в долларах</p>
+                <input maxLength="25" size="40" type={"number"} id="dollarOutput" readOnly="readonly" />
+            </div>
         </>
     );
- }
- 
- function changeCurrency() {
-	var rubInput = document.getElementById('rubInput');
-	var dollarOutput = document.getElementById('dollarOutput');
-	var diff = 65;
-	dollarOutput.value = rubInput.value / diff;
 }
 
- export default ShamrayPage;
+function changeCurrency() {
+    var rubInput = document.getElementById('rubInput');
+    var dollarOutput = document.getElementById('dollarOutput');
+    var diff = 65;
+    dollarOutput.value = rubInput.value / diff;
+}
+
+export default ShamrayPage;
