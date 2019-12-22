@@ -21,6 +21,7 @@ function Main() {
             <NavigateButton to="/LegendCreoMod" title="Иваненко" text="😃" primaryColor="#795548" />
             <NavigateButton to="/StasPotapov" title="Потапов" text="😊" primaryColor="#CDDC39" />
             <NavigateButton to="/virachev" title="Вирачев" text="React Footer Comp" fontSize="30px" primaryColor="#0087aa" />
+            <NavigateButton to="/Shamray" title="Шамрай" text="😊" primaryColor="#00796B" />
           </div>
         </nav>
       </section>
