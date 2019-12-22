@@ -97,7 +97,7 @@ function VirachevPage({ data }) {
                 copyrightIconStyle={{ color: "white", fontSize: 20, marginRight: 10 }}
                 copyrightTextStyle={{ color: "white", fontSize: 20, marginRight: 10 }}
                 textStyle={{ color: "white", fontSize: 16, marginRight: 10 }}
-                text={"All rights reserved."}
+                text={"IKBO-02-16"}
             />
         </div>
     );
