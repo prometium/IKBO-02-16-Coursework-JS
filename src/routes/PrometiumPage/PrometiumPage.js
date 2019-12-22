@@ -10,15 +10,19 @@ import {
   Legend
 } from 'recharts';
 import AppBar from 'src/components/AppBar';
+import Button from 'src/components/Button';
+import MemeComponent from 'src/components/MemeComponent';
+import useMeme from 'src/components/MemeComponent/useMeme';
 
 import './prometium-page.css';
 
-const color = '#6200ea';
+function PrometiumPage({ data, handleClick }) {
+  const { open, closeMeme } = useMeme(true);
 
-function PrometiumPage({ data }) {
   return (
     <>
-      <AppBar title="Красновский" color={color} />
+      <AppBar title="Красновский" color="primary" />
+      <MemeComponent open={open} closeMeme={closeMeme} />
       <section>
         <div className="prometium-container">
           <ResponsiveContainer>
@@ -39,10 +43,15 @@ function PrometiumPage({ data }) {
                 name="Курс валюты к рублю"
                 dataKey="value"
                 barSize={20}
-                fill={color}
+                fill="#546e7a"
               />
             </BarChart>
           </ResponsiveContainer>
+        </div>
+        <div className="prometium-buttons-container">
+          <Button onClick={handleClick} primary className="prometium-button">
+            Обновить
+          </Button>
         </div>
       </section>
     </>
@@ -55,7 +64,8 @@ PrometiumPage.propTypes = {
       name: PropTypes.string.isRequired,
       value: PropTypes.number.isRequired
     }).isRequired
-  ).isRequired
+  ).isRequired,
+  handleClick: PropTypes.func.isRequired
 };
 
 export default PrometiumPage;

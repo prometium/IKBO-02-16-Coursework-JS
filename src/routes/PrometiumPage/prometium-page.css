@@ -1,12 +1,22 @@
 .prometium-container {
   margin: auto;
   min-height: 200px;
-  height: calc(100vh - 64px - 32px);
+  height: calc(100vh - 64px - 32px - 30px - 32px);
   max-width: 1500px;
+}
+
+.prometium-buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.prometium-button {
+  margin: 32px 0;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 960px) {
   .prometium-container {
-    height: calc(100vh - 48px - 32px);
+    height: calc(100vh - 48px - 32px - 30px - 32px);
   }
 }

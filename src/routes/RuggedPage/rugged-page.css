@@ -1,0 +1,23 @@
+.rugged-container {
+  margin: auto;
+  min-height: 250px;
+  height: calc(100vh - 64px - 32px - 32px - 64px);
+  max-width: 1500px;
+}
+
+.rugged-buttons-container {
+    display: flex;
+    justify-content: center;
+}
+
+.rugged-map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 32px 0;
+}
+
+.rugged-button {
+    margin: 32px 0;
+    cursor: pointer;
+}
