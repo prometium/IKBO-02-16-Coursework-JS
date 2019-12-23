@@ -30,7 +30,7 @@ function log_json(json) {
 }
 
 const api = () =>
-    fetchJsonp('https://api.vk.com/method/wall.get?access_token=abcabc1aabcabc1aabcabc1a39aba40940aabcaabcabc1af63747417444a9b169b5cad1&v=5.92&domain=ru9gag&count=20&offset=0')
+    fetchJsonp('https://api.vk.com/method/wall.get?access_token=abcabc1aabcabc1aabcabc1a39aba40940aabcaabcabc1af63747417444a9b169b5cad1&v=5.92&domain=ru9gag&count=15&offset=0')
         .then(response => response.json())
         .then(function (json) {
             return log_json(json)
