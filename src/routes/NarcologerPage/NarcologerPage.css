@@ -1,0 +1,9 @@
+body {
+    background: #050505;
+  }
+  
+  .my-path {
+    fill:none;
+    stroke:#cfc33a;
+    stroke-width:4;
+  }
