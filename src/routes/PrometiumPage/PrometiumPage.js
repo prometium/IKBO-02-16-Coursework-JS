@@ -11,13 +11,18 @@ import {
 } from 'recharts';
 import AppBar from 'src/components/AppBar';
 import Button from 'src/components/Button';
+import MemeComponent from 'src/components/MemeComponent';
+import useMeme from 'src/components/MemeComponent/useMeme';
 
 import './prometium-page.css';
 
 function PrometiumPage({ data, handleClick }) {
+  const { open, closeMeme } = useMeme(true);
+
   return (
     <>
       <AppBar title="Красновский" color="primary" />
+      <MemeComponent open={open} closeMeme={closeMeme} />
       <section>
         <div className="prometium-container">
           <ResponsiveContainer>

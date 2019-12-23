@@ -41,6 +41,7 @@
     "react": "^16.12.0",
     "react-color": "^2.17.3",
     "react-dom": "^16.12.0",
+    "react-footer-comp": "^3.0.1",
     "react-image-autofit-frame": "^0.1.0",
     "react-resize-image": "^1.0.4",
     "react-router-dom": "^5.1.2",

@@ -22,12 +22,10 @@ function AlwordPage() {
   const handleBackGround = (color) => {
     background = color.hex;
     setData({ background: background, foreground: foreground });
-    updateBackground = true;
   };
   const handleForeground = (color) => {
     foreground = color.hex;
     setData({ background: background, foreground: foreground });
-    updateBackground = true;
   };
 
   function Process(ref) {
@@ -65,6 +63,7 @@ function AlwordPage() {
     function init() {
       
       canvas = document.createElement('canvas');
+      canvas.style = "position: fixed;";
       canvas.width = width;
       canvas.height = height;
       context = canvas.getContext('2d');
