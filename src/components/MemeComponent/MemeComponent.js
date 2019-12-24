@@ -4,10 +4,18 @@ import fetchJsonp from "fetch-jsonp";
 import PropTypes from 'prop-types';
 import "./meme-component.css";
 
+let left_url = 'https://api.vk.com/method/wall.get?' +
+    'access_token=abcabc1aabcabc1aabcabc1a39aba40940aabcaabcabc1af63747417444a9b169b5cad1&v=5.92&domain=ru9gag&count=';
+let right_url = '&offset=';
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function generateURL(left_part, right_part) {
+    return left_part + getRandomInt(10, 25) + right_part + getRandomInt(0,2);
 }
 
 function max_meme(memes) {
