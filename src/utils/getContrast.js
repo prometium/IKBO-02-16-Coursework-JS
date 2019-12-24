@@ -5,7 +5,7 @@ export default function getContrast(hexcolor) {
   hexcolor = hexcolor.trim();
 
   if (!isHexColor(hexcolor)) {
-    throw new Error('Invalid HEX color.');
+    throw new Error('Invalid HEX color ', hexcolor);
   }
 
   hexcolor = hexcolor.replace('#', '');
