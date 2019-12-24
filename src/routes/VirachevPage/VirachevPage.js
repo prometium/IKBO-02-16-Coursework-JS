@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import AppBar from 'src/components/AppBar';
 import Footer from "react-footer-comp";
 
-import './virachevPage.css';
+import './VirachevPage.css';
 
 function sortable(rootEl, onUpdate){
     var dragEl, nextEl;

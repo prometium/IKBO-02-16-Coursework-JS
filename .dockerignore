@@ -3,3 +3,7 @@ node_modules
 
 # production
 dist
+
+.git
+.idea
+__mocks__
