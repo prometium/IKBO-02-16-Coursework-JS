@@ -3,8 +3,10 @@ import AppBar from 'src/components/AppBar';
 import './LulusuzakuPage.css';
 import VKLabel from '../../components/VKLabel/VKLabel';
 import '../../components/VKLabel/vklabel.css';
+import MemeComponent from 'src/components/MemeComponent';
+import useMeme from 'src/components/MemeComponent/useMeme';
 function LulusuzakuPage({ data }) {
-
+    const { open, closeMeme } = useMeme(true);
     useEffect(() => {
         // тут можно писать код
         //alert("Hello from LulusuzakuPage")
@@ -22,6 +24,7 @@ function LulusuzakuPage({ data }) {
 
         <div className="main" >
             <AppBar title="Очеретная" />
+            <MemeComponent open={open} closeMeme={closeMeme} />
             <div className="user-card">
                 <div className="container">
                     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cookies.jpg" alt="cookies" className="hero-image" />
