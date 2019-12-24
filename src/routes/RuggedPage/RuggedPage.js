@@ -3,6 +3,7 @@ import {YMaps, Map, TrafficControl, ZoomControl, FullscreenControl, Placemark} f
 
 import AppBar from 'src/components/AppBar';
 import Button from 'src/components/Button';
+import VKLabel from 'src/components/VKLabel/VKLabel';
 
 import './rugged-page.css';
 
@@ -40,7 +41,9 @@ function RuggedPage() {
           setShown(!trafficState.trafficShown)
         }}>Переключить отображение пробок</Button>
       </div>
-
+      <div style={{position: "absolute", right: "0", bottom: "0", margin: "10px"}}>
+        <VKLabel to="shumilov_v"/>
+      </div>
     </>
   );
 }
