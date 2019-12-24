@@ -4,6 +4,12 @@ import fetchJsonp from "fetch-jsonp";
 import PropTypes from 'prop-types';
 import "./meme-component.css";
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
 function max_meme(memes) {
     let i = 0;
     let max = 0;
@@ -25,7 +31,6 @@ function log_json(json) {
     let memes = json['response']['items'];
     let mem = max_meme(memes);
     let tmp = mem['attachments'][0]['photo']['sizes'];
-    console.log(tmp);
     return tmp[tmp.length - 1]['url'];
 }
 
