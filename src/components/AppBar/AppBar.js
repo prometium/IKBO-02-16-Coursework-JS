@@ -2,23 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import getContrast from 'src/utils/getContrast';
+import theme from 'src/theme';
 
 import './app-bar.css';
-
-const getThemeColor = variant =>
-  getComputedStyle(document.documentElement).getPropertyValue(
-    `--color-${variant}`
-  );
-
-const colorPrimary = getThemeColor('primary');
-const colorSecondary = getThemeColor('secondary');
 
 const detectFinalColor = color => {
   switch (color) {
     case 'primary':
-      return colorPrimary;
+      return theme.palette.primary;
     case 'secondary':
-      return colorSecondary;
+      return theme.palette.secondary;
     default:
       return color;
   }
@@ -29,7 +22,7 @@ function AppBar({ title, color = '#616161', className = '', ...rest }) {
 
   return (
     <header
-      className={['app-bar', className].join(' ')}
+      className={['app-bar', className].join(' ').trim()}
       style={{
         backgroundColor: finalColor,
         color: getContrast(finalColor)
