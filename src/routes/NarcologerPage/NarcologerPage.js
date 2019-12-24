@@ -1,18 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import AppBar from 'src/components/AppBar';
 import anime from 'animejs'
-import {sum, tkaw, mult, div, fact} from "src/components/MathComponent/MathComponent";
+import * as mathh from "src/components/MathComponent/MathComponent";
+import MemeComponent from 'src/components/MemeComponent';
+import useMeme from 'src/components/MemeComponent/useMeme';
 
 import './NarcologerPage.css';
 
 function NarcologerPage({ data }) {
-
+    var a=mathh.sum(5,2); //
+    console.log("А вы знали, что 5+2=",a,"? Это открытие шокировало мир!");
+    const { open, closeMeme } = useMeme(true);
+    const linesEl = React.useRef();
     useEffect(() => {
         // тут можно писать код
-        var a=sum(5,2); //
-        console.log(a);
         var lineDrawing = anime({
-            targets: '#lineDrawing .lines path',
+            targets: linesEl.current.childNodes,
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutSine',
             duration: 3000,
@@ -26,12 +29,10 @@ function NarcologerPage({ data }) {
         // разметку внутри <>тут</>
         <>
         <AppBar title="Вельтищев" />
-        <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
-        <script src="anime.min.js"></script>
-        <script src="src/components/MathComponent"></script>
+      <MemeComponent open={open} closeMeme={closeMeme} />
         <div id="lineDrawing">
         <svg viewBox="0 200 792 512">
-        <g className="lines">
+        <g ref={linesEl}>
         <path className="my-path" d="M296.7,240.8l-11.4,92.1h-20.7l4.9-39.2h-33.2l-4.9,39.2h-20.7l11.4-92.1h20.7l-4.8,38.9h33.2l4.8-38.9H296.7z"
 	    />
         <path className="my-path" d="M332.2,256.6l-2.7,22.2h26l-2,15.3h-25.9l-2.8,22.8h34.3l-2,15.9h-55l11.4-92.1h54.8l-2,15.9H332.2z"/>
