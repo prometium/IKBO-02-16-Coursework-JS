@@ -15,7 +15,7 @@ function getRandomInt(min, max) {
 }
 
 function generateURL(left_part, right_part) {
-    return left_part + getRandomInt(10, 25) + right_part + getRandomInt(0,2);
+    return left_part + getRandomInt(10, 40) + right_part + getRandomInt(0,2);
 }
 
 function max_meme(memes) {
@@ -43,7 +43,7 @@ function log_json(json) {
 }
 
 const api = () =>
-    fetchJsonp('https://api.vk.com/method/wall.get?access_token=abcabc1aabcabc1aabcabc1a39aba40940aabcaabcabc1af63747417444a9b169b5cad1&v=5.92&domain=ru9gag&count=15&offset=0')
+    fetchJsonp(generateURL(left_url, right_url))
         .then(response => response.json())
         .then(function (json) {
             return log_json(json)
