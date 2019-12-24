@@ -3,6 +3,7 @@ import React from 'react';
 import MemeComponent from "src/components/MemeComponent";
 import Button from "src/components/Button";
 import useMemeComponent from "src/components/MemeComponent/useMeme";
+import "./wo1kowsky-page.css"
 
 function Wo1kowskyPage() {
     const {open, openMeme, closeMeme} = useMemeComponent(true);
@@ -10,7 +11,9 @@ function Wo1kowskyPage() {
     return (
         <>
             <AppBar title="Волков" color='#ff69b4'/>
-            <Button className="button-test" onClick={openMeme}>SHOW MEME</Button>
+            <div className="button_div">
+                <Button className="button-test" onClick={openMeme}>SHOW MEME</Button>
+            </div>
             <MemeComponent open={open} closeMeme={closeMeme}/>
         </>
     );
