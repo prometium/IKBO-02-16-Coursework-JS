@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 import './vklabel.css';
 
-function VKLabel({ title, primaryColor = '#424242', to = '/', text = "empty", fontSize = "40px", ...rest }) {
+function VKLabel({ to = '/' }) {
 
   const Request = require('../VKLabel/vkapi').Request;
   const [data, setData] = React.useState([]);
@@ -15,7 +14,6 @@ function VKLabel({ title, primaryColor = '#424242', to = '/', text = "empty", fo
   }, [to]);
 
   return (
-
     <>
       <div className="information">
         <a href={"https://vk.com/id"+data.id} style={{ textDecoration: 'none', margin: "10px" }}>
@@ -29,11 +27,7 @@ function VKLabel({ title, primaryColor = '#424242', to = '/', text = "empty", fo
 }
 
 VKLabel.propTypes = {
-  title: PropTypes.string,
-  primaryColor: PropTypes.string,
-  secondaryColor: PropTypes.string,
-  to: PropTypes.string,
-  fontSize: PropTypes.string
+  to: PropTypes.string
 };
 
 export default VKLabel;
