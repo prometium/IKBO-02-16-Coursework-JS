@@ -27,7 +27,7 @@ function LulusuzakuPage({ data }) {
             <MemeComponent open={open} closeMeme={closeMeme} />
             <div className="user-card">
                 <div className="container">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cookies.jpg" alt="cookies" className="hero-image" />
+                    <div alt="cookies" className="hero-image" />
                     <VKLabel to={input} />
                     <div className="stats">
                         <form onSubmit={event => { event.preventDefault(); handleClick() }} style={{ margin: "15px" }}>

@@ -33,12 +33,16 @@
 }
 
 .avatar {
+    
     margin: 0 auto;
     margin: -82px auto 15px;
     display: block;
     border-radius: 110px;
     width: 110px;
     height: 110px;
+    background-size: cover;
+    background-position: top center;
+    border-radius: 50%;
 }
 
 .name {
@@ -75,4 +79,10 @@
     display: block;
     font-size: 14px;
     color: #8c98a8;
+}
+
+.hero-image{
+    width: 300px;
+    height: 244px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cookies.jpg);
 }
