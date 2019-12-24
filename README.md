@@ -94,6 +94,7 @@ import MemeComponent from "src/components/MemeComponent";
 import useMemeComponent from "src/components/MemeComponent/useMeme";
 ...
 const {open, openMeme, closeMeme} = useMemeComponent(true);
+...
 <MemeComponent open={open} closeMeme={closeMeme}/>
 ```
 
