@@ -85,6 +85,19 @@ import NavigateButton from '../../components/NavigateButton';
 <NavigateButton to="/rugged" title="Шумилов" text="React Yandex Maps" fontSize="30px" primaryColor="#1976D2" />
 ```
 
+### Волков - React-компонент MemeComponent
+Изображение развлекательного характера из сообщества социальной сети ВКонтакте
+
+#### Пример
+```javascript
+import MemeComponent from "src/components/MemeComponent";
+import useMemeComponent from "src/components/MemeComponent/useMeme";
+...
+const {open, openMeme, closeMeme} = useMemeComponent(true);
+...
+<MemeComponent open={open} closeMeme={closeMeme}/>
+```
+
 ## Использованные сторонние модули
 
 ### Красновский - Recharts
@@ -96,3 +109,7 @@ Yandex Maps API bindings for React (https://github.com/gribnoysup/react-yandex-m
 ### Слепушко - React Color
 A Collection of Color Pickers from Sketch, Photoshop, Chrome, Github, Twitter, Material Design & more
 (https://casesandberg.github.io/react-color/)
+
+### Волков - react-image-resizer
+react-image-resizer is a React component that resizes the image to be nice
+(https://www.npmjs.com/package/react-image-resizer)
