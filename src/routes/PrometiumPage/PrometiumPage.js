@@ -13,6 +13,7 @@ import AppBar from 'src/components/AppBar';
 import Button from 'src/components/Button';
 import MemeComponent from 'src/components/MemeComponent';
 import useMeme from 'src/components/MemeComponent/useMeme';
+import VKLabel from 'src/components/VKLabel/VKLabel';
 
 import './prometium-page.css';
 
@@ -54,6 +55,9 @@ function PrometiumPage({ data, handleClick }) {
           </Button>
         </div>
       </section>
+      <div style={{position: "absolute", right: "0", bottom: "0", margin: "10px"}}>
+        <VKLabel to="akpac"/>
+      </div>
     </>
   );
 }

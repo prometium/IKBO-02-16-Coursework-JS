@@ -3,6 +3,7 @@ import AppBar from 'src/components/AppBar';
 import { useRef } from 'react'
 import { useEffect } from 'react'
 import { SketchPicker } from 'react-color'
+import VKLabel from '../../components/VKLabel/VKLabel';
 
 import './Alword-page.css';
 
@@ -11,9 +12,9 @@ import './Alword-page.css';
 
 function AlwordPage() {
   const ref = useRef(null);
-  const [data, setData] = React.useState({ background: '#fff', foreground: "#fff" });
-  
-  let FPS = 60; 
+  const [data, setData] = React.useState({ background: '#fff', foreground: "#000" });
+
+  let FPS = 60;
   let SPEED = 50;
   let height = document.documentElement.clientHeight - 64;
   let width = document.documentElement.clientWidth;
@@ -61,14 +62,14 @@ function AlwordPage() {
     animate();
 
     function init() {
-      
+
       canvas = document.createElement('canvas');
       canvas.style = "position: fixed;";
       canvas.width = width;
       canvas.height = height;
       context = canvas.getContext('2d');
       context.fillStyle = background;
-      context.fillRect(0,0,width,height);
+      context.fillRect(0, 0, width, height);
       ref.current.appendChild(canvas);
     }
 
@@ -81,7 +82,7 @@ function AlwordPage() {
       }
 
     }
-    
+
     function draw() {
 
       let dot = dots[getRandomInt(0, dots.length - 1)];
@@ -118,7 +119,7 @@ function AlwordPage() {
   return (
     <>
       <AppBar title="Слепушко" />
-      <div ref={ref} className="canvas"/>
+      <div ref={ref} className="canvas" />
       <div style={{ float: "left" }}>
         <SketchPicker
           color={data.background}
@@ -129,6 +130,10 @@ function AlwordPage() {
         <SketchPicker
           color={data.foreground}
           onChangeComplete={handleForeground} />
+      </div>
+      
+      <div style={{position: "absolute",right:"0",bottom:"0", margin:"10px"}}>
+        <VKLabel to="alword" />
       </div>
     </>
   );
