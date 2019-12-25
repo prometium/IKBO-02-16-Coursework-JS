@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Main = React.lazy(() => import('./routes/Main'));
 const PrometiumPage = React.lazy(() => import('./routes/PrometiumPage'));
+const VinnikovPage = React.lazy(() => import('./routes/VinnikovPage'));
 const VirachevPage = React.lazy(() => import('./routes/VirachevPage'));
 const AlwordPage = React.lazy(() => import('./routes/AlwordPage'));
 const RuggedPage = React.lazy(() => import('./routes/RuggedPage'));
@@ -27,6 +28,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Main} />
           <Route exact path="/prometium" component={PrometiumPage} />
+          <Route exact path="/vinnikov" component={VinnikovPage} />
           <Route exact path="/virachev" component={VirachevPage} />
           <Route exact path="/Alword" component={AlwordPage} />
           <Route exact path="/rugged" component={RuggedPage} />

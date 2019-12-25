@@ -17,6 +17,7 @@ function Main() {
             <NavigateButton to="/Justalgit" title="Ларин" text="🕵️‍♂️" primaryColor="#9C27B0" />
             <NavigateButton to="/Narcologer" title="Вельтищев" text="💂‍♂️" primaryColor="#F44336" />
             <NavigateButton to="/GlebSuvakin" title="Сувакин" text="🤔" primaryColor="#00796B" />
+            <NavigateButton to="/vinnikov" title="Винников" text="Whois" primaryColor="#253C65" />
             <NavigateButton to="/Vezlim" title="Цепковский" text="👀" primaryColor="#4CAF50" />
             <NavigateButton to="/LegendCreoMod" title="Иваненко" text="😃" primaryColor="#795548" />
             <NavigateButton to="/StasPotapov" title="Потапов" text="😊" primaryColor="#CDDC39" />
