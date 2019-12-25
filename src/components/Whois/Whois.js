@@ -6,7 +6,12 @@ function Whois(ip){
     xhr.send();
     
     if (xhr.status == 200) {
-      return JSON.parse(xhr.responseText);
+      var temp = JSON.parse(xhr.responseText);
+      var arr = [];
+     Object.entries(temp).map(([key, val]) => {
+      arr.push({name: key, value: val})
+     });
+      return arr;
     } 
     return false;
 }
