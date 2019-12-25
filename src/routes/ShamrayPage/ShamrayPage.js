@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import AppBar from 'src/components/AppBar';
 import Footer from "react-footer-comp";
+import MemeComponent from 'src/components/MemeComponent';
+import useMeme from 'src/components/MemeComponent/useMeme';
 
 import './ShamrayPage.css';
 
@@ -9,18 +11,19 @@ function ShamrayPage({ data }) {
     const rubInputRef = useRef(null);
     const dollarOutputRef = useRef(null);
 
+    const { open, closeMeme } = useMeme(true);
+
     var currency = 1;
     getCurrencyFromCBRF();
 
     useEffect(() => {
-        // тут можно писать код
-        //alert("Hello from ShamrayPage")
 
     });
 
     return (
         <>
             <AppBar title="Шамрай" color="#1a9f29" />
+            <MemeComponent open={open} closeMeme={closeMeme} />
             <div className="outer">
                 <div className="inner">
                     <p className="shamray">Введите сумму в рублях</p>
