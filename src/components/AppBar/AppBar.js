@@ -2,14 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import getContrast from 'src/utils/getContrast';
+import theme from 'src/theme';
 
 import './app-bar.css';
 
-function AppBar({ title, color = '#424242', className = '', ...rest }) {
+const detectFinalColor = color => {
+  switch (color) {
+    case 'primary':
+      return theme.palette.primary;
+    case 'secondary':
+      return theme.palette.secondary;
+    default:
+      return color;
+  }
+};
+
+function AppBar({ title, color = '#616161', className = '', ...rest }) {
+  const finalColor = detectFinalColor(color);
+
   return (
     <header
-      className={['app-bar', className].join(' ')}
-      style={{ backgroundColor: color, color: getContrast(color) }}
+      className={['app-bar', className].join(' ').trim()}
+      style={{
+        backgroundColor: finalColor,
+        color: getContrast(finalColor)
+      }}
       {...rest}
     >
       <div className="app-bar__block">
@@ -32,4 +49,4 @@ AppBar.propTypes = {
   className: PropTypes.string
 };
 
-export default AppBar;
+export default React.memo(AppBar);

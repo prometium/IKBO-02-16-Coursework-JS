@@ -2,4 +2,8 @@
 node_modules
 
 # production
-build
+dist
+
+.git
+.idea
+__mocks__

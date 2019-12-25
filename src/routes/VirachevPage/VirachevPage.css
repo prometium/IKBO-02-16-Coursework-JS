@@ -1,0 +1,34 @@
+#wrapperVirachev{
+    min-height: 100%;
+    background-color: #0087aa;
+}
+
+#dropnbox{
+    width: 270px;
+    margin: 10px auto;
+    background-color: #88c3ea;
+    padding: 15px 10px 20px 10px;
+}
+
+#dropnbox ul {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#dropnbox li {
+    list-style: none;
+    background: url(image/1.jpg) no-repeat center;
+    background-size: contain;
+    cursor: move;
+    padding: 35px 20px;
+    font-size: 20px;
+    background-color: #fcfcff;
+    margin-bottom: 10px;
+}
+
+.ghost {
+    opacity: .4;
+}
