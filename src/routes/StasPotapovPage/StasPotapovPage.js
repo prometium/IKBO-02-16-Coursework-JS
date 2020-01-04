@@ -2,6 +2,7 @@ import React from 'react';
 import { Motion, spring } from 'react-motion';
 import AppBar from 'src/components/AppBar';
 import Button from 'src/components/Button';
+import Spinner from 'src/components/Spinner';
 
 import './StasPotapovPage.css';
 
@@ -29,9 +30,10 @@ function StasPotapovPage() {
 
   return (
     <>
-      <AppBar title="Потапов" />
+      <AppBar title="Потапов" color="#1565c0" />
       <div className="potapov">
         <div>
+          <Spinner show={true} />
           <Button
             onMouseDown={handleMouseDownX}
             onTouchStart={handleTouchStartX}
