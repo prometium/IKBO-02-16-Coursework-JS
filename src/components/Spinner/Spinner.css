@@ -1,5 +1,5 @@
 .spinner {
-  display: none;
+  visibility: hidden;
   width: 2rem;
   height: 2rem;
   animation: spinner 500ms linear infinite;
@@ -23,5 +23,5 @@
 }
 
 .spinner--show {
-  display: block;
+  visibility: visible;
 }

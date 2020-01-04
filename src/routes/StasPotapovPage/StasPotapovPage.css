@@ -6,6 +6,10 @@
   flex-direction: column;
 }
 
+.potapov-buttons {
+  margin-top: 8px;
+}
+
 .potapov-demo {
   border-radius: 4px;
   background-color: #bdbdbd;
