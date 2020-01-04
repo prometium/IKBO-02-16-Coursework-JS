@@ -1,0 +1,24 @@
+.potapov {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.potapov-demo {
+  border-radius: 4px;
+  background-color: #bdbdbd;
+  position: relative;
+  margin: 16px 3px 10px;
+  width: 450px;
+  height: 450px;
+}
+
+.potapov-demo-block {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #1565c0;
+}

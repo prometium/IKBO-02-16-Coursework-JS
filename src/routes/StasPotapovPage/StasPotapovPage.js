@@ -1,23 +1,70 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Motion, spring } from 'react-motion';
 import AppBar from 'src/components/AppBar';
+import Button from 'src/components/Button';
 
 import './StasPotapovPage.css';
 
-function StasPotapovPage({ data }) {
+function StasPotapovPage() {
+  const [openX, setOpenX] = React.useState();
+  const [openY, setOpenY] = React.useState();
 
-    useEffect(() => {
-        // тут можно писать код
-        alert("Hello from StasPotapovPage")
-    
-    });
+  const handleMouseDownX = () => {
+    setOpenX(!openX);
+  };
 
-    return (
-        // разметку внутри <>тут</>
-        <>
-            <AppBar title="Потапов" />
-            <div>Hello!</div>
-        </>
-    );
- }
+  const handleTouchStartX = e => {
+    e.preventDefault();
+    handleMouseDownX();
+  };
 
- export default StasPotapovPage;
+  const handleMouseDownY = () => {
+    setOpenY(!openY);
+  };
+
+  const handleTouchStartY = e => {
+    e.preventDefault();
+    handleMouseDownY();
+  };
+
+  return (
+    <>
+      <AppBar title="Потапов" />
+      <div className="potapov">
+        <div>
+          <Button
+            onMouseDown={handleMouseDownX}
+            onTouchStart={handleTouchStartX}
+            primary
+          >
+            {openX ? 'Влево' : 'Вправо'}
+          </Button>
+          <Button
+            onMouseDown={handleMouseDownY}
+            onTouchStart={handleTouchStartY}
+            primary
+          >
+            {openY ? 'Вверх' : 'Вниз'}
+          </Button>
+        </div>
+        <Motion
+          style={{ x: spring(openX ? 400 : 0), y: spring(openY ? 400 : 0) }}
+        >
+          {({ x, y }) => (
+            <div className="potapov-demo">
+              <div
+                className="potapov-demo-block"
+                style={{
+                  WebkitTransform: `translate3d(${x}px, ${y}px, 0)`,
+                  transform: `translate3d(${x}px, ${y}px, 0)`
+                }}
+              />
+            </div>
+          )}
+        </Motion>
+      </div>
+    </>
+  );
+}
+
+export default StasPotapovPage;
