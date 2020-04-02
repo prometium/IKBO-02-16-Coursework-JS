@@ -1,0 +1,57 @@
+html,
+body {
+    height: 100%;
+}
+
+.content {
+    
+    height: 800px;
+    justify-content: center;
+    background-image: url(github_PNG28.png);
+}
+
+.outerDiv {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    align-items: center;
+    flex-direction: colu
+}
+.input {
+    display: block;
+    background-color:#FFF;
+    color:#222;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:normal;
+    position: relative;
+    padding: 5px 5px;
+    margin: 5px;
+    font-size: 16px;
+    width: 200px;
+    height: 40px;    
+}
+
+.button {
+    display: block;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:normal;
+    background-color:#FFF;
+    color:#222;
+    font-size: 16px;
+    width: 200px;
+    margin: 25px ;
+    position: relative;
+    }
+
+.vklabel {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 10px 
+}
+
+.ReposUser {
+    justify-content: center;
+    margin: auto;
+}
