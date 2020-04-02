@@ -96,10 +96,10 @@ function Main() {
               primaryColor="#00796B"
             />
             <NavigateButton
-            to="/AntoniKochet"
-            title="Кочетков"
-            text="Repositories User GitHub"
-            primaryColor="#4682B4"
+              to="/AntoniKochet"
+              title="Кочетков"
+              text="Repositories User GitHub"
+              primaryColor="#4682B4"
             />
           </div>
         </nav>
