@@ -37,7 +37,7 @@ function RepositoriesUser({name }){
         if (name != '')
         {
             getReposUser(name, setRepos).then(result =>{
-                if (result != undefined || result.length != 0)
+                if (result !== undefined)
                 {
                     console.log(result);
                     setRepos(result);
