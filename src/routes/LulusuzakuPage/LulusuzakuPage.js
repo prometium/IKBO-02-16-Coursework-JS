@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import AppBar from 'src/components/AppBar';
 import './LulusuzakuPage.css';
 import VKLabel from '../../components/VKLabel/VKLabel';
@@ -8,10 +8,6 @@ import useMeme from 'src/components/MemeComponent/useMeme';
 
 function LulusuzakuPage() {
   const { open, closeMeme } = useMeme(true);
-  useEffect(() => {
-    // тут можно писать код
-    //alert("Hello from LulusuzakuPage")
-  });
 
   const inputRef = React.useRef();
   const [input, setInput] = React.useState('1');
