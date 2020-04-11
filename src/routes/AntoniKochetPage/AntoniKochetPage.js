@@ -9,15 +9,11 @@ import './AntoniKochet-page.css';
 function AntoniKochetPage() {
   const niknameRef = useRef(null);
   const [nikname, setName] = useState('');
-  useEffect(() => {
-    //setName(niknameRef.current.value);
-    //console.log(nikname);
-  }, [nikname]);
 
   return (
-    <>
+    <div className="antoni-kochet-page">
+      <AppBar title="Кочетков" />
       <div className="content">
-        <AppBar title="Кочетков" />
         <div className="outerDiv">
           <input
             type="text"
@@ -41,7 +37,7 @@ function AntoniKochetPage() {
           <VKLabel to="id25624080" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

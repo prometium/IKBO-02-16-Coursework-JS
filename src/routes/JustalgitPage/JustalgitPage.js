@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import AppBar from 'src/components/AppBar';
 import Footer from 'react-footer-comp';
-//Optional include of the default css styles
 import './JustalgitPage.css';
 
 function fetchWeather(cityName) {
@@ -25,55 +24,49 @@ function JustalgitPage() {
   const windInfoRef = useRef(null);
   const humidityInfoRef = useRef(null);
 
-  useEffect(() => {
-    //alert("Hello from JustalgitPage");
-  });
-
   return (
-    <>
-      <body>
-        <div className="content">
-          <AppBar title="Ларин" />
-          <div className="outerDiv">
-            <input
-              type="text"
-              className="input"
-              ref={cityInputRef}
-              placeholder="Введите название города"
-            />
-            <button className="button" onClick={getCityWeather}>
-              Получить данные о погоде
-            </button>
-            <p className="weatherParamInfo" ref={tempInfoRef}></p>
-            <p className="weatherParamInfo" ref={feelsLikeInfoRef}></p>
-            <p className="weatherParamInfo" ref={windInfoRef}></p>
-            <p className="weatherParamInfo" ref={humidityInfoRef}></p>
-          </div>
+    <div className="justalgit-page">
+      <div className="content">
+        <AppBar title="Ларин" />
+        <div className="outerDiv">
+          <input
+            type="text"
+            className="input"
+            ref={cityInputRef}
+            placeholder="Введите название города"
+          />
+          <button className="button" onClick={getCityWeather}>
+            Получить данные о погоде
+          </button>
+          <p className="weatherParamInfo" ref={tempInfoRef}></p>
+          <p className="weatherParamInfo" ref={feelsLikeInfoRef}></p>
+          <p className="weatherParamInfo" ref={windInfoRef}></p>
+          <p className="weatherParamInfo" ref={humidityInfoRef}></p>
         </div>
-        <Footer
-          id="footer"
-          copyrightIcon
-          year={[2019]}
-          height={100}
-          bgColor={'white'}
-          copyrightText
-          copyrightIconStyle={{
-            color: '#006c78',
-            fontSize: 20,
-            marginRight: 10
-          }}
-          copyrightTextStyle={{
-            color: '#006c78',
-            fontSize: 20,
-            marginRight: 10
-          }}
-          textStyle={{ color: '#006c78', fontSize: 20, marginRight: 10 }}
-          text={
-            'Justalgit Вся представленная погодная информация получена с сервиса https://openweathermap.org/'
-          }
-        />
-      </body>
-    </>
+      </div>
+      <Footer
+        id="footer"
+        copyrightIcon
+        year={[2019]}
+        height={100}
+        bgColor={'white'}
+        copyrightText
+        copyrightIconStyle={{
+          color: '#006c78',
+          fontSize: 20,
+          marginRight: 10
+        }}
+        copyrightTextStyle={{
+          color: '#006c78',
+          fontSize: 20,
+          marginRight: 10
+        }}
+        textStyle={{ color: '#006c78', fontSize: 20, marginRight: 10 }}
+        text={
+          'Justalgit Вся представленная погодная информация получена с сервиса https://openweathermap.org/'
+        }
+      />
+    </div>
   );
 
   function getCityWeather() {

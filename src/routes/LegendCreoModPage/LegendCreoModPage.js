@@ -37,21 +37,19 @@ function LegendCreoModPage() {
     });
   }
   return (
-    <>
+    <div className="legend-creo-mod-page">
       <AppBar className="appbar" title="Иваненко" />
-      <body>
-        <div className="content">
-          <p>USD: {price_USD}</p>
-          <p>RUB: {price_RUB}</p>
-          <button className="button" onClick={OnClick}>
-            Получить данные о курсе биткоина
-          </button>
-        </div>
-        <div className="vk">
-          <VKLabel to="legendmod" />
-        </div>
-      </body>
-    </>
+      <div className="content">
+        <p>USD: {price_USD}</p>
+        <p>RUB: {price_RUB}</p>
+        <button className="button" onClick={OnClick}>
+          Получить данные о курсе биткоина
+        </button>
+      </div>
+      <div className="vk">
+        <VKLabel to="legendmod" />
+      </div>
+    </div>
   );
 }
 

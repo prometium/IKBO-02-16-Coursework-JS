@@ -38,6 +38,7 @@ function VinnikovPage() {
 
   function handleSubmit(event) {
     var ns = Whois(data.ip);
+
     if (ns) {
       setData({ ...data, nslist: ns });
     }
