@@ -4,17 +4,18 @@ import PropTypes from 'prop-types';
 import './button.css';
 
 function Button({
-                  component = 'button',
-                  primary = false,
-                  className = '',
-                  ...rest
-                }) {
+  component = 'button',
+  primary = false,
+  className = '',
+  ...rest
+}) {
   const Component = component;
 
   return (
     <Component
       className={`button ${primary ? 'button-primary ' : ''}${className}`}
-      {...rest}/>
+      {...rest}
+    />
   );
 }
 

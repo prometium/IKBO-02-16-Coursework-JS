@@ -6,8 +6,8 @@
 }
 
 .rugged-buttons-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .rugged-map {
@@ -18,6 +18,6 @@
 }
 
 .rugged-button {
-    margin: 32px 0;
-    cursor: pointer;
+  margin: 32px 0;
+  cursor: pointer;
 }

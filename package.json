@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "format": "prettier --write src/**/*.{js,css}",
+    "lint": "eslint src/**/*.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +29,7 @@
     "file-loader": "^4.3.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
+    "prettier": "^2.0.4",
     "react-image-resizer": "^1.3.0",
     "style-loader": "^1.0.2",
     "webpack": "^4.42.1",
