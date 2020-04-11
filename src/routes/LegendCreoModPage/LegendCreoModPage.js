@@ -1,18 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import AppBar from 'src/components/AppBar';
 import VKLabel from 'src/components/VKLabel/VKLabel';
 
 import './LegendCreoModPage.css';
 
-function LegendCreoModPage({ data }) {
+function LegendCreoModPage() {
   const [price_RUB, setRUB] = useState(0);
   const [price_USD, setUSD] = useState(0);
 
-  /* useEffect(() => {
-        // тут можно писать код
-        alert("Hello from LegendCreoModPage")
-    
-    });*/
   function get_price_BTC() {
     return fetch(
       'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=RUB,USD' +
@@ -42,7 +37,6 @@ function LegendCreoModPage({ data }) {
     });
   }
   return (
-    // разметку внутри <>тут</>
     <>
       <AppBar className="appbar" title="Иваненко" />
       <body>

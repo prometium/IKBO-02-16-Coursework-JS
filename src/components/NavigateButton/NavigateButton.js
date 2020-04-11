@@ -13,7 +13,7 @@ function NavigateButton({
   ...rest
 }) {
   return (
-    <Link to={to} style={{ textDecoration: 'none', margin: '10px' }}>
+    <Link to={to} style={{ textDecoration: 'none', margin: '10px' }} {...rest}>
       <div className="cardContainer">
         <div className="cardHeader">
           <div className="cardIdentity">
@@ -37,6 +37,7 @@ NavigateButton.propTypes = {
   primaryColor: PropTypes.string,
   secondaryColor: PropTypes.string,
   to: PropTypes.string,
+  text: PropTypes.string,
   fontSize: PropTypes.string
 };
 

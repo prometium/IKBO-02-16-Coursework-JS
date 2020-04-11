@@ -1,20 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import AppBar from 'src/components/AppBar';
 import anime from 'animejs';
-import * as mathh from 'src/components/MathComponent/MathComponent';
 import MemeComponent from 'src/components/MemeComponent';
 import useMeme from 'src/components/MemeComponent/useMeme';
 
 import './NarcologerPage.css';
 
-function NarcologerPage({ data }) {
-  var a = mathh.sum(5, 2); //
-  console.log('А вы знали, что 5+2=', a, '? Это открытие шокировало мир!');
+function NarcologerPage() {
   const { open, closeMeme } = useMeme(true);
   const linesEl = React.useRef();
+
   useEffect(() => {
-    // тут можно писать код
-    var lineDrawing = anime({
+    anime({
       targets: linesEl.current.childNodes,
       strokeDashoffset: [anime.setDashoffset, 0],
       easing: 'easeInOutSine',
@@ -28,7 +25,6 @@ function NarcologerPage({ data }) {
   });
 
   return (
-    // разметку внутри <>тут</>
     <>
       <AppBar title="Вельтищев" />
       <MemeComponent open={open} closeMeme={closeMeme} />
@@ -54,8 +50,8 @@ function NarcologerPage({ data }) {
             <path
               className="my-path"
               d="M580.2,280.9c0,19.5-10,38.7-27.8,47.6c-16.6,8.3-38.7,7.5-51.7-6.9c-13-14.5-12.6-37.5-4.3-54.2
-	    c8.7-17.5,26.9-28.2,46.4-27.6c10.2,0.3,20.1,4.3,27,11.9C577,259.6,580.2,270.3,580.2,280.9z M559.1,281.4c0-11.3-5-23.5-17.6-25
-	    c-11.6-1.4-21.5,5.5-26.1,15.9c-4.5,10.2-5.8,24.5-0.8,34.7c5.3,10.6,18.5,13.1,28.6,7.9C555.3,308.6,559.1,293.9,559.1,281.4z"
+	c8.7-17.5,26.9-28.2,46.4-27.6c10.2,0.3,20.1,4.3,27,11.9C577,259.6,580.2,270.3,580.2,280.9z M559.1,281.4c0-11.3-5-23.5-17.6-25
+	c-11.6-1.4-21.5,5.5-26.1,15.9c-4.5,10.2-5.8,24.5-0.8,34.7c5.3,10.6,18.5,13.1,28.6,7.9C555.3,308.6,559.1,293.9,559.1,281.4z"
             />
           </g>
         </svg>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import AppBar from 'src/components/AppBar';
 import Footer from 'react-footer-comp';
 //Optional include of the default css styles
@@ -32,7 +32,7 @@ function JustalgitPage() {
   return (
     <>
       <body>
-        <div class="content">
+        <div className="content">
           <AppBar title="Ларин" />
           <div className="outerDiv">
             <input

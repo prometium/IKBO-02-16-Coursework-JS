@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import AppBar from 'src/components/AppBar';
 import Footer from 'react-footer-comp';
 import MemeComponent from 'src/components/MemeComponent';
@@ -6,7 +6,7 @@ import useMeme from 'src/components/MemeComponent/useMeme';
 
 import './ShamrayPage.css';
 
-function ShamrayPage({ data }) {
+function ShamrayPage() {
   const rubInputRef = useRef(null);
   const dollarOutputRef = useRef(null);
 

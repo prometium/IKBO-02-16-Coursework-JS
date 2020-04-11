@@ -37,10 +37,7 @@ function AlwordPage() {
           window.mozRequestAnimationFrame ||
           window.oRequestAnimationFrame ||
           window.msRequestAnimationFrame ||
-          function (
-            /* function FrameRequestCallback */ callback,
-            /* DOMElement Element */ element
-          ) {
+          function (/* function FrameRequestCallback */ callback) {
             window.setTimeout(callback, 1000 / FPS);
           }
         );

@@ -55,7 +55,7 @@ function sortable(rootEl, onUpdate) {
   );
 }
 
-function VirachevPage({ data }) {
+function VirachevPage() {
   const ref = useRef();
 
   useEffect(() => {

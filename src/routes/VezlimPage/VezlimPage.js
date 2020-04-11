@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import AppBar from 'src/components/AppBar';
 
 import './VezlimPage.css';
 
-function VezlimPage({ data }) {
+function VezlimPage() {
   useEffect(() => {
-    // тут можно писать код
     alert('Hello from VezlimPage');
   });
 
   return (
-    // разметку внутри <>тут</>
     <>
       <AppBar title="Цепковский?" />
       <div>Hello!</div>

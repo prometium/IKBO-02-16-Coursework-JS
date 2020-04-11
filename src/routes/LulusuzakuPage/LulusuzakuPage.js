@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import AppBar from 'src/components/AppBar';
 import './LulusuzakuPage.css';
 import VKLabel from '../../components/VKLabel/VKLabel';
 import '../../components/VKLabel/vklabel.css';
 import MemeComponent from 'src/components/MemeComponent';
 import useMeme from 'src/components/MemeComponent/useMeme';
-function LulusuzakuPage({ data }) {
+
+function LulusuzakuPage() {
   const { open, closeMeme } = useMeme(true);
   useEffect(() => {
     // тут можно писать код
