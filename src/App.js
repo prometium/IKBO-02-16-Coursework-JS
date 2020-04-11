@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Main = React.lazy(() => import('./routes/Main'));
 const PrometiumPage = React.lazy(() => import('./routes/PrometiumPage'));
+const VinnikovPage = React.lazy(() => import('./routes/VinnikovPage'));
 const VirachevPage = React.lazy(() => import('./routes/VirachevPage'));
 const AlwordPage = React.lazy(() => import('./routes/AlwordPage'));
 const RuggedPage = React.lazy(() => import('./routes/RuggedPage'));
@@ -19,7 +20,7 @@ const StasPotapovPage = React.lazy(() => import('./routes/StasPotapovPage'));
 const JustalgitPage = React.lazy(() => import('./routes/JustalgitPage'));
 const Wo1kowskyPage = React.lazy(() => import('./routes/Wo1kowskyPage'));
 const ShamrayPage = React.lazy(() => import('./routes/ShamrayPage'));
-
+const AntoniKochetPage = React.lazy(() => import('./routes/AntoniKochetPage'));
 function App() {
   return (
     <Router>
@@ -27,6 +28,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Main} />
           <Route exact path="/prometium" component={PrometiumPage} />
+          <Route exact path="/vinnikov" component={VinnikovPage} />
           <Route exact path="/virachev" component={VirachevPage} />
           <Route exact path="/Alword" component={AlwordPage} />
           <Route exact path="/rugged" component={RuggedPage} />
@@ -39,6 +41,7 @@ function App() {
           <Route exact path="/Justalgit" component={JustalgitPage} />
           <Route exact path="/Wo1kowsky" component={Wo1kowskyPage} />
           <Route exact path="/Shamray" component={ShamrayPage} />
+          <Route exact path="/AntoniKochet" component={AntoniKochetPage} />
         </Switch>
       </React.Suspense>
     </Router>

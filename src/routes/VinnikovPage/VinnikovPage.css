@@ -1,0 +1,7 @@
+.searchWrapper{
+  width: 650px;
+  margin: 20px auto;
+}
+.MuiPaper-elevation1 {
+  box-shadow: none !important;
+}
