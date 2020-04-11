@@ -6,31 +6,28 @@
   text-align: center;
   text-decoration: none;
   user-select: none;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   color: black;
   outline: none;
   font-size: 0.875rem;
-  border: 1px solid rgba(0, 0, 0, .4);
-  border-top-color: rgba(0, 0, 0, .3);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-top-color: rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   background: white;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0) inset,
-  0 1px 1px 1px rgba(255, 255, 255, .2),
-  0 -1px 1px 1px rgba(0, 0, 0, 0);
-  transition: .2s ease-in-out;
+    0 1px 1px 1px rgba(255, 255, 255, 0.2), 0 -1px 1px 1px rgba(0, 0, 0, 0);
+  transition: 0.2s ease-in-out;
 }
 
 .button:hover:not(:active) {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0) inset,
-  0 1px 1px 1px rgba(0, 255, 255, .5),
-  0 -1px 1px 1px rgba(0, 255, 255, .5);
+    0 1px 1px 1px rgba(0, 255, 255, 0.5), 0 -1px 1px 1px rgba(0, 255, 255, 0.5);
 }
 
 .button:active {
   opacity: 90%;
-  box-shadow: 0 0 3px rgba(0, 0, 0, .5) inset,
-  0 1px 1px 1px rgba(255, 255, 255, .4),
-  0 -1px 1px 1px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset,
+    0 1px 1px 1px rgba(255, 255, 255, 0.4), 0 -1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .button-primary {

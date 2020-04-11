@@ -1,1 +1,1 @@
-export {default} from './RuggedPage';
+export { default } from './RuggedPage';

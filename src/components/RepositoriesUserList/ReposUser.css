@@ -1,11 +1,10 @@
 ul {
-    list-style-type: decimal;
-    
+  list-style-type: decimal;
 }
 
 li {
-    justify-content: center;
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 5px;
+  align-items: center;
 }

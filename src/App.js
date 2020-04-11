@@ -15,7 +15,9 @@ const LulusuzakuPage = React.lazy(() => import('./routes/LulusuzakuPage'));
 const NarcologerPage = React.lazy(() => import('./routes/NarcologerPage'));
 const GlebSuvakinPage = React.lazy(() => import('./routes/GlebSuvakinPage'));
 const VezlimPage = React.lazy(() => import('./routes/VezlimPage'));
-const LegendCreoModPage = React.lazy(() => import('./routes/LegendCreoModPage'));
+const LegendCreoModPage = React.lazy(() =>
+  import('./routes/LegendCreoModPage')
+);
 const StasPotapovPage = React.lazy(() => import('./routes/StasPotapovPage'));
 const JustalgitPage = React.lazy(() => import('./routes/JustalgitPage'));
 const Wo1kowskyPage = React.lazy(() => import('./routes/Wo1kowskyPage'));

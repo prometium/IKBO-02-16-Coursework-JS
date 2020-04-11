@@ -55,8 +55,15 @@ function PrometiumPage({ data, handleClick }) {
           </Button>
         </div>
       </section>
-      <div style={{position: "absolute", right: "0", bottom: "0", margin: "10px"}}>
-        <VKLabel to="akpac"/>
+      <div
+        style={{
+          position: 'absolute',
+          right: '0',
+          bottom: '0',
+          margin: '10px'
+        }}
+      >
+        <VKLabel to="akpac" />
       </div>
     </>
   );
